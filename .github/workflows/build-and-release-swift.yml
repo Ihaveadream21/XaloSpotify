@@ -201,7 +201,8 @@ jobs:
 
     - name: Upload Packages
       env:
-        GH_TOKEN: ${{ github.token }}
+        # HIER WURDE DER WERT GEÄNDERT, UM IHR HOCHBERECHTIGTES SECRET ZU VERWENDEN
+        GH_TOKEN: ${{ secrets.RELEASE_TOKEN }} 
       run: |
         gh release upload "swift$EEVEESPOTIFY_VERSION" \
           "$EEVEESPOTIFY_ROOTFUL" "$EEVEESPOTIFY_ROOTLESS" \
