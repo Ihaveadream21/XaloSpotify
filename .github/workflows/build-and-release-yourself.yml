@@ -103,6 +103,7 @@ jobs:
             EeveeSpotify.ipa 
             EeveeSpotify-patched.ipa
           draft: true
+          token: ${{ secrets.RELEASE_TOKEN }} # <--- HINZUGEFÜGT!
 
       - name: Output Release URL
         run: |
