@@ -24,7 +24,7 @@ func getPlanOverviewData() throws -> Data {
     let plan = SpotifyPlan.with {
         $0.notice = SpotifyPlan.Notice.with {
             $0.message = "payment_notice".localized
-            $0.status = 2 // 0 - trial, 1 - prepaid, 2 - subsсription
+            $0.status = 2 // 0 - trial, 1 - prepaid, 2 - subscription
         }
         $0.subscription = SpotifyPlan.SubscriptionInfo.with {
             $0.planVariant = 2
